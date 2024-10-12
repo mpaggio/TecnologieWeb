@@ -1,0 +1,19 @@
+.title {
+    background-color: #52DEC3;
+    height: 200px;
+}
+
+.introduction {
+    background-color: #52CBDE;
+    height: 200px;
+}
+
+.content {
+    background-color:  #529FDE;
+    height: 200px;
+}
+
+.footer {
+    background-color: #5273DE;
+    height: 200px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- L'attributo lang nel tag html serve per specificare la lingua principale del documento -->
+<html lang="it">
+<!-- Il tag head definisce l'intestazione del documento -->
+<head>
+    <!-- Il tag title rappresenta il titolo o il nome del documento -->
+    <title>Home | Test HTML</title>
+    <!-- Il tag base indica il path base del documento (serve per risolvere URL relativi) -->
+    <base href="/00_Prove/" />
+    <!-- Il tag link serve per creare relazioni con altri documenti e risorse (usato per includere .css) -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Il tag meta aggiunge altri metadati al documento -->
+    <meta charset="UTF-8" /> 
+    <meta name="author" content="Marco Paggetti"/>
+</head>
+<!-- Il tag body definisce il corpo/contenuto del documento -->
+<body>
+    <div class="title">
+        <!-- Il tag header definisce l'intestazione di un documento o di una sua sezione -->
+        <header>
+            <!-- Il tag h seguito da un numero serve per introdurre i titoli delle sezioni -->
+            <h1>Sito web di Marco Paggetti</h1>
+        </header>
+        <!-- Il tag nav definisce un insieme di link di navigazione -->
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduzione</a></li>
+                <li><a href="#content">Contento principale</a></li>
+                <li><a href="#contacts">Contatti</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Sezione per l'introduzione -->
+    <section id="introduction" class="introduction">
+        <h2>Introduzione</h2>
+    </section>
+    <!-- Sezione per il contenuto -->
+    <section id="content" class="content">
+        <h2>Contenuto principale</h2>
+        Nel mezzo del cammin di nostra vita <br/>   <!-- Il tag br serve per le andate a capo -->
+        mi ritrovai per una selva oscura <br/>
+        chè la diritta via era smarrita.
+    </section>
+    <!-- Sezione per i contatti -->
+    <footer id="contacts" class="footer">
+        <h2>Contatti</h2>        
+    </footer>
+</body>
+</html>
