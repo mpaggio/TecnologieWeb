@@ -36,15 +36,50 @@
         <h2>Introduzione</h2>
     </section>
     <!-- Sezione per il contenuto -->
-    <section id="content" class="content">
-        <h2>Contenuto principale</h2>
-        Nel mezzo del cammin di nostra vita <br/>   <!-- Il tag br serve per le andate a capo -->
-        mi ritrovai per una selva oscura <br/>
-        chè la diritta via era smarrita.
-    </section>
+    <main id="content">
+        <div class="content">
+            <h2>Contenuto principale</h2>
+            <p>
+                Benvenuti nella pagina principale del sito:
+            </p>
+            <section>
+                <h3>Contenuto letterario</h3>
+                <p class="text">
+                    "Nel mezzo del cammin di nostra vita<sub>1</sub><sup>*</sup> <br/>   <!-- Il tag br serve per le andate a capo -->
+                    mi ritrovai per una <span class="highlight">selva oscura</span><sub>2</sub> <br/>  <!-- Il tag span serve per fornire specifiche presentazionali a porzioni testuali -->
+                    chè la diritta via era smarrita<sub>3</sub>."
+                </p>
+                <small>
+                    *Qui il poeta intende dire che si trova alla veneranda età di 25 anni ...
+                </small>
+            </section>
+            <section>
+                <h3>Contenuto informatico</h3>
+                <p>
+                    <!-- Il tag abbr serve per abbreviazioni o acronimi (che vanno spiegati nell'attributo title e visualizzabili tenendo fermo il cursore sopra la parola) -->
+                    Quando parliamo di <abbr title="Hypertext Markup Language">HTML</abbr>, ci riferiamo a un linguaggio di markup utilizzato per creare pagine web.
+                </p>
+                <p>
+                    <!-- Il tag dfn serve per le definizioni di termini (che vanno spiegati nell'attributo title) -->
+                    Un elemento importante in HTML è il <dfn title="Modello a oggetti del documento">document object model</dfn>, che rappresenta la struttura logica del documento.
+                    <!-- Il tag code serve per inserire porzioni di codice nel testo (anche HTML) --> 
+                    Attraverso il <code>DOM</code>, gli sviluppatori possono manipolare i contenuti e la struttura delle pagine.
+                </p>
+                <p>
+                    <!-- Il tag var serve per definire una variabile o una costante -->
+                    Ad esempio, in un linguaggio di programmazione, una variabile può essere definita come <var>x</var>, che rappresenta un valore numerico.
+                    In JavaScript, potresti scrivere <code>let x = 5;</code> per dichiarare una variabile e assegnarle un valore.
+                </p>
+            </section>
+            
+        </div>
+    </main>
     <!-- Sezione per i contatti -->
     <footer id="contacts" class="footer">
-        <h2>Contatti</h2>        
+        <h2>Contatti</h2>
+        <p>
+            Puoi contattarmi via email: <a href="mailto:marco.paggetti@studio.unibo.it">marco.paggetti@studio.unibo.it</a>
+        </p>        
     </footer>
 </body>
 </html>

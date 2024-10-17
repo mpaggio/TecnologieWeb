@@ -10,10 +10,21 @@
 
 .content {
     background-color:  #529FDE;
-    height: 200px;
+    height: 400px;
 }
 
 .footer {
     background-color: #5273DE;
     height: 200px;
+}
+
+.text {
+    text-shadow: 1px 1px 0 grey;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.highlight {
+    color: purple;
+    font-weight: bold;
 }
