@@ -1,0 +1,115 @@
+/*
+    Regola di reset
+*/
+body, header, h1, ul {  /* La virgola permette di specificare più selettori */
+    margin: 0;
+    padding: 0;
+}
+
+aside img {
+    width: 50px;
+}
+
+body {
+    background-color: #e4e4e4;  /* Colore specificato con esadecimale */
+}
+
+body > header {
+    background-color: rgb(54,54,54);  /* Colore specificato con rgb */
+    /*font-family: 'Courier New', Courier, monospace;  /* Proprietà ereditata */
+    color: #fff;  /* Colore speficato in forma contratta in esadecimale */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Alternative --> header > h1, header h1, body > header h1, h1 */
+body > header > h1 {
+    font-family: 'Courier New', Courier, monospace;  /* Gli altri elementi specificati sono delle alternative allo stile particolare */ 
+}
+
+nav {
+    margin: 0 5%;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+nav > ul > li {
+    width: 45%;
+    display: inline-block;
+    background-color: rgb(54,54,54);
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+/* :nth-child() permette di specificare l'n-esimo figlio, altrimenti è possibile utilizzare dei selettori del tipo :first-child oppure :last-child */
+nav > ul > li:nth-child(odd) {
+    margin-right: 10%;
+}
+
+nav > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;  /* Serve per eliminare ad esempio la sottolineatura del link */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
+    Verdana, sans-serif;
+    padding: 5px 0;
+}
+
+nav > ul > li > a:hover {
+    color: rgb(219, 69, 83);
+}
+
+main {
+    margin: 20px 5% 0;
+}
+
+main > article {  /* Oppure si può fare article e basta */
+    background-color: #fff;
+    border: 1px, solid, #cacaca;  /* Vuole il colore, la dimensione e lo stile (è la proprietà abbreviata di border-color, border-size e border-style */
+    margin-bottom: 20px;
+}
+
+article > header > div {
+    height: 200px;
+    text-align: center;
+}
+
+article > header > div > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+article > header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+article > header > h2, article > header > p {
+    padding: 0 5%;
+}
+
+article > header > p {
+    font-size: 12px;
+}
+
+article > section {
+    padding: 0 5%;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Posso anche usare la proprietà abbreviata font: 12px Verdana, Geneva, ... */
+}
+
+article > footer {
+    text-align: right;
+    padding: 20px 5% 5%;
+}
+
+article > footer > a {
+    color: #000;
+    background-color: rgb(221, 221, 221);
+    text-decoration: none;
+}
