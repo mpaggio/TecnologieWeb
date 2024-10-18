@@ -4,83 +4,91 @@
 <!-- Il tag head definisce l'intestazione del documento -->
 <head>
     <!-- Il tag title rappresenta il titolo o il nome del documento -->
-    <title>Home | Test HTML</title>
+    <title>Home | FO2</title>
     <!-- Il tag base indica il path base del documento (serve per risolvere URL relativi) -->
     <base href="/00_Prove/" />
     <!-- Il tag link serve per creare relazioni con altri documenti e risorse (usato per includere .css) -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- Il tag meta aggiunge altri metadati al documento -->
     <meta charset="UTF-8" /> 
     <meta name="author" content="Marco Paggetti"/>
 </head>
 <!-- Il tag body definisce il corpo/contenuto del documento -->
 <body>
-    <div class="title">
-        <!-- Il tag header definisce l'intestazione di un documento o di una sua sezione -->
-        <header>
-            <!-- Il tag h seguito da un numero serve per introdurre i titoli delle sezioni -->
-            <h1>Sito web di Marco Paggetti</h1>
-        </header>
-        <!-- Il tag nav definisce un insieme di link di navigazione -->
-        <nav>
-            <ul>
-                <li><a href="#introduction">Introduzione</a></li>
-                <li><a href="#content">Contento principale</a></li>
-                <li><a href="#contacts">Contatti</a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </nav>
-    </div>
-    <!-- Sezione per l'introduzione -->
-    <section id="introduction" class="introduction">
-        <h2>Introduzione</h2>
-    </section>
-    <!-- Sezione per il contenuto -->
+    <!-- Il tag header definisce l'intestazione di un documento o di una sua sezione -->
+    <header>
+        <!-- Il tag h seguito da un numero serve per introdurre i titoli delle sezioni -->
+        <h1>AGESCI Forlì 2</h1>
+    </header>
+    <!-- Il tag nav definisce un insieme di link di navigazione -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chi siamo</a></li>
+            <li><a href="#">Le unità</a></li>
+            <li><a href="#">Sede</a></li>
+            <li><a href="#">Iscriviti</a></li>
+        </ul>
+    </nav>
+    <figure>
+        <img src="img/AgesciEmiliaRomagna.png" alt="Logo dell'Agesci Emilia Romagna">
+        <figcaption>Logo Agesci Emilia Romagna</figcaption>
+    </figure>
     <main id="content">
-        <div class="content">
-            <h2>Contenuto principale</h2>
+        <!-- Sezione per l'introduzione -->
+        <section id="introduction">
+            <h2>Introduzione</h2>
+            <!-- Il tag video serve per aggiungere un contenuto video alla pagina -->
+            <video controls> <!-- L'attributo controls serve per inserire i comandi di gestione del video -->
+                <source src="video/Route nazionale .mp4" type="video/mp4">
+                <!-- Quello che viene scritto all'interno del tag video è ciò che viene scritto al posto del video quando il browser non supporta il tag video -->
+                Il tuo browser non supporta il tag video
+            </video>
+            <!-- Il tag audio serve per aggiungere un contenuto audio alla pagina -->
+            <audio autoplay loop> <!-- L'attributo autoplay permette di far si che l'elemento audio o video parta in automatico, mentre loop permette di far continuare all'infinito l'audio o il video, ripetendolo all'infinito -->
+                <source src="audio/Nature.mp3">Il tuo browser non supporta il tag audio
+            </audio>
+        </section>
+        <!-- Sezione per il contenuto -->
+        <h2>Contenuto principale</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eius delectus aut distinctio aperiam dolores debitis necessitatibus illum, maxime aliquid omnis architecto sequi recusandae saepe libero maiores odit voluptate veniam. Aliquid nulla odio ipsum, accusantium atque assumenda incidunt, nihil ea magnam culpa cupiditate id facere velit temporibus vel! Cum expedita voluptatum nisi, perspiciatis, aspernatur, exercitationem non accusamus ad similique ullam ipsam. Quis dolorum commodi eligendi eveniet dignissimos labore, consequatur officiis facilis! Pariatur consequatur beatae dignissimos, quasi, distinctio ut doloribus eaque a laborum accusantium obcaecati. Tempora delectus, adipisci itaque nisi ipsum aperiam deleniti corporis facilis perferendis? Quaerat, odio eum. Quae, fugiat.</p>
+        <section>
+            <h3>Contenuto letterario</h3>
             <p>
-                Benvenuti nella pagina principale del sito:
+                "Nel mezzo del cammin di nostra vita<sub>1</sub><sup>*</sup> <br/>   <!-- Il tag br serve per le andate a capo -->
+                mi ritrovai per una <span>selva oscura</span><sub>2</sub> <br/>  <!-- Il tag span serve per fornire specifiche presentazionali a porzioni testuali -->
+                chè la diritta via era smarrita<sub>3</sub>."
             </p>
-            <section>
-                <h3>Contenuto letterario</h3>
-                <p class="text">
-                    "Nel mezzo del cammin di nostra vita<sub>1</sub><sup>*</sup> <br/>   <!-- Il tag br serve per le andate a capo -->
-                    mi ritrovai per una <span class="highlight">selva oscura</span><sub>2</sub> <br/>  <!-- Il tag span serve per fornire specifiche presentazionali a porzioni testuali -->
-                    chè la diritta via era smarrita<sub>3</sub>."
-                </p>
-                <small>
-                    *Qui il poeta intende dire che si trova alla veneranda età di 25 anni ...
-                </small>
-            </section>
-            <section>
-                <h3>Contenuto informatico</h3>
-                <p>
-                    <!-- Il tag abbr serve per abbreviazioni o acronimi (che vanno spiegati nell'attributo title e visualizzabili tenendo fermo il cursore sopra la parola) -->
-                    Quando parliamo di <abbr title="Hypertext Markup Language">HTML</abbr>, ci riferiamo a un linguaggio di markup utilizzato per creare pagine web.
-                </p>
-                <p>
-                    <!-- Il tag dfn serve per le definizioni di termini (che vanno spiegati nell'attributo title) -->
-                    Un elemento importante in HTML è il <dfn title="Modello a oggetti del documento">document object model</dfn>, che rappresenta la struttura logica del documento.
-                    <!-- Il tag code serve per inserire porzioni di codice nel testo (anche HTML) --> 
-                    Attraverso il <code>DOM</code>, gli sviluppatori possono manipolare i contenuti e la struttura delle pagine.
-                </p>
-                <p>
-                    <!-- Il tag var serve per definire una variabile o una costante -->
-                    Ad esempio, in un linguaggio di programmazione, una variabile può essere definita come <var>x</var>, che rappresenta un valore numerico.
-                    In JavaScript, potresti scrivere <code>let x = 5;</code> per dichiarare una variabile e assegnarle un valore.
-                </p>
-            </section>
-            
-        </div>
+            <small>
+                *Qui il poeta intende dire che si trova alla veneranda età di 25 anni ...
+            </small>
+        </section>
+        <section>
+            <h3>Contenuto informatico</h3>
+            <p>
+                <!-- Il tag abbr serve per abbreviazioni o acronimi (che vanno spiegati nell'attributo title e visualizzabili tenendo fermo il cursore sopra la parola) -->
+                Quando parliamo di <abbr title="Hypertext Markup Language">HTML</abbr>, ci riferiamo a un linguaggio di markup utilizzato per creare pagine web.
+            </p>
+            <p>
+                <!-- Il tag dfn serve per le definizioni di termini (che vanno spiegati nell'attributo title) -->
+                Un elemento importante in HTML è il <dfn title="Modello a oggetti del documento">document object model</dfn>, che rappresenta la struttura logica del documento.
+                <!-- Il tag code serve per inserire porzioni di codice nel testo (anche HTML) --> 
+                Attraverso il <code>DOM</code>, gli sviluppatori possono manipolare i contenuti e la struttura delle pagine.
+            </p>
+            <p>
+                <!-- Il tag var serve per definire una variabile o una costante -->
+                Ad esempio, in un linguaggio di programmazione, una variabile può essere definita come <var>x</var>, che rappresenta un valore numerico.
+                In JavaScript, potresti scrivere <code>let x = 5;</code> per dichiarare una variabile e assegnarle un valore.
+            </p>
+        </section>            
     </main>
     <!-- Sezione per i contatti -->
-    <footer id="contacts" class="footer">
+    <footer id="contacts">
         <h2>Contatti</h2>
         <p>
             Puoi contattarmi via email: 
-            <del><a href="mailto:mpaggiojr@gmail.com">mpaggiojr@gmail.com</a></del>
-            <ins><a href="mailto:marco.paggetti@studio.unibo.it">marco.paggetti@studio.unibo.it</a></ins>
+            <del datetime="17/10/2024"><a href="mailto:mpaggiojr@gmail.com">mpaggiojr@gmail.com</a></del>
+            <ins datetime="17/10/2024"><a href="mailto:marco.paggetti@studio.unibo.it">marco.paggetti@studio.unibo.it</a></ins>
         </p>        
     </footer>
 </body>

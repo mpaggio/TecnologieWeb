@@ -112,4 +112,11 @@ article > footer > a {
     color: #000;
     background-color: rgb(221, 221, 221);
     text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+article > footer > a:hover {
+    color: rgb(219, 69, 83);
 }
