@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Home | test 3</title>
+    <meta charset="UTF-8" /> 
+    <meta name="author" content="Marco Paggetti"/>
+</head>
+<body>
+    <form action="index.html" method="GET">
+        <fieldset>
+            <legend>Anagrafica</legend>
+            <label>Nome:
+                <input type="text" name="nome" placeholder="nome.." required />
+            </label><br/>
+            <label>Cognome:
+                <input type="text" name="cognome" placeholder="cognome.." required />
+            </label><br/>
+            <label>Email del referente:
+                <input type="email" name="emailreferente" placeholder="email.." required />
+            </label><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Elaborato</legend>
+            <label> Tipo di elaborato:
+                <select name="tipoElaborato" size="1">
+                    <option value="semplice">Semplice</option>
+                    <option value="medio">Medio</option>
+                    <option value="complesso">Complesso</option>
+                </select>
+            </label><br/>
+            <label>Numero membri:
+                <input  type="number" name="numeroMembri" min="1" max="4" required />
+            </label>
+        </fieldset>
+        <input type="submit" value="Invia">
+    </form>
+</body>
+</html>

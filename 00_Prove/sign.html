@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- L'attributo lang nel tag html serve per specificare la lingua principale del documento -->
+<html lang="it">
+<!-- Il tag head definisce l'intestazione del documento -->
+<head>
+    <!-- Il tag title rappresenta il titolo o il nome del documento -->
+    <title>Home | FO2</title>
+    <!-- Il tag base indica il path base del documento (serve per risolvere URL relativi) -->
+    <base href="/00_Prove/" />
+    <!-- Il tag link serve per creare relazioni con altri documenti e risorse (usato per includere .css) -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Il tag meta aggiunge altri metadati al documento -->
+    <meta charset="UTF-8" /> 
+    <meta name="author" content="Marco Paggetti"/>
+</head>
+<!-- Il tag body definisce il corpo/contenuto del documento -->
+<body>
+    <!-- Il tag header definisce l'intestazione di un documento o di una sua sezione -->
+    <header>
+        <!-- Il tag h seguito da un numero serve per introdurre i titoli delle sezioni -->
+        <h1>AGESCI Forlì 2</h1>
+    </header>
+    <!-- Il tag nav definisce un insieme di link di navigazione -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Chi siamo</a></li>
+            <li><a href="index.html">Le unità</a></li>
+            <li><a href="index.html">Sede</a></li>
+            <li><a href="sign.html">Iscriviti</a></li>
+        </ul>
+    </nav>
+    <figure>
+        <img src="img/AgesciEmiliaRomagna.png" alt="Logo dell'Agesci Emilia Romagna">
+        <figcaption>Logo Agesci Emilia Romagna</figcaption>
+    </figure>
+    <main id="content">
+        <section>
+            <!-- Il tag form definisce un form di input e di inserimento da parte dell'utente -->
+            <form action="sign.html" method="get" oninput="x.value=parseInt(a.value)"> <!-- Il tag get non è sicuro, ma senza fila javascript il sito va in crash -->
+               <!-- Il tag fieldset serve per definire un area di inserimenti accomunati da qualche caratteristica --> 
+                <fieldset>
+                    <!-- Il tag legend serve per definire il titolo del fieldset -->
+                    <legend>Dati dell'iscritto:</legend>
+                    <!-- Il tag label è FONDAMENTALE e serve per definire (a livello di accessibilità) cosa si sta chiedendo -->
+                    <label>Nome
+                        <!-- Il tag input consente di inserire nella pagina dei valori testuali o altro -->
+                        <input type="text" name="nome" required /></label><br/>
+                    <label>Cognome
+                        <input type="text" name="cognome" required /></label><br/>
+                    <label>Maschio
+                        <!-- Col tag radio è possibili specificare più opzioni, nel caso in cui si metta però lo stesso name in input -->
+                        <input type="radio" name="sesso" value="maschio" required /></label><br/>
+                    <label>Femmina
+                        <input type="radio" name="sesso" value="maschio" required /></label><br/>
+                    <label>Altro
+                        <input type="radio" name="sesso" value="altro" required /></label><br/>
+                    <label>
+                        <!-- Col tag radio è possibili specificare più opzioni, nel caso in cui si metta però lo stesso name in input -->
+                        <input type="checkbox" name="malattie" value="morbillo" />Ho avuto il morbillo</label><br/>
+                    <label>
+                        <input type="checkbox" name="malattie" value="varicella" />Ho avuto la varicella</label><br/>
+                    <label>
+                        <input type="checkbox" name="malattie" value="influenza" />Ho avuto l'influenza</label><br/>
+                    <label>Email
+                        <input type="email" name="email" required /></label><br/>
+                    <label>Telefono
+                        <input type="tel" name="telefono" required /></label><br/>
+                    <label>Data di nascita
+                        <input type="date" name="data" required /></label><br/>
+                    <label>Password
+                        <input type="password" name="password" required /></label><br/>
+                    <label>Felicità (0-10) 
+                        <input type="number" name="felicità" min="0" max="10"></label><br/>
+                    <label for="a">Urgenza (0-10) 
+                        <input type="range" id="a" name="urgenza" min="0" max="10" /></label><br/>
+                    Il valore dello slider è: <output name="x" for="a"></output><br/>
+                    <label>Documento d'identità
+                        <input type="file" name="identità"></label><br/>
+                    <label>Aggiunte
+                        <!-- Il tag textarea permette di creare un'area di testo con dimensioni specificato (poi modificabili dall'utente) -->
+                        <br/><textarea rows="4" cols="50" placeholder="Questa sezione verrà letta direttamente dalla segreteria, perciò usare un linguaggio corretto."></textarea></label><br/>
+                    <label>Scegli un branco
+                        <br/><select name="branco" size="1">
+                            <optgroup label="Cappuccinini">
+                                <option value="RDP">Roccia della Pace</option>
+                                <!-- L'attributo selected permette di specificare quale opzioni sarà mostrata nel riquadro della selection -->
+                                <option value="SF" selected>San Francesco</option>
+                            </optgroup>
+                            <optgroup label="Romiti">
+                                <option value="FR">Fiore Rosso</option>
+                            </optgroup>
+                        </select></label>
+                </fieldset>
+                <!-- L'attributo type con valore submit presenta un bottone che permette l'invio delle credenziali inserite -->
+                <input type="submit" value="Invia">
+                <!-- L'attributo type con valore reset serve per presentare un bottone che permette di cancellare le credenziali inserite -->
+                <input type="reset" value="Cancella">
+            </form>
+        </section>            
+    </main>
+    <!-- Sezione per i contatti -->
+    <footer id="contacts">
+        <h2>Contatti</h2>
+        <p>
+            Puoi contattarmi via email: 
+            <del datetime="17/10/2024"><a href="mailto:mpaggiojr@gmail.com">mpaggiojr@gmail.com</a></del>
+            <ins datetime="17/10/2024"><a href="mailto:marco.paggetti@studio.unibo.it">marco.paggetti@studio.unibo.it</a></ins>
+        </p>        
+    </footer>
+</body>
+</html>
