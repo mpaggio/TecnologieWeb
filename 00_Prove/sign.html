@@ -41,7 +41,7 @@
                <!-- Il tag fieldset serve per definire un area di inserimenti accomunati da qualche caratteristica --> 
                 <fieldset>
                     <!-- Il tag legend serve per definire il titolo del fieldset -->
-                    <legend>Dati dell'iscritto:</legend>
+                    <legend>Anagrafica:</legend>
                     <!-- Il tag label è FONDAMENTALE e serve per definire (a livello di accessibilità) cosa si sta chiedendo -->
                     <label>Nome
                         <!-- Il tag input consente di inserire nella pagina dei valori testuali o altro -->
@@ -53,33 +53,32 @@
                         <input type="radio" name="sesso" value="maschio" required /></label><br/>
                     <label>Femmina
                         <input type="radio" name="sesso" value="maschio" required /></label><br/>
-                    <label>Altro
-                        <input type="radio" name="sesso" value="altro" required /></label><br/>
-                    <label>
-                        <!-- Col tag radio è possibili specificare più opzioni, nel caso in cui si metta però lo stesso name in input -->
-                        <input type="checkbox" name="malattie" value="morbillo" />Ho avuto il morbillo</label><br/>
-                    <label>
-                        <input type="checkbox" name="malattie" value="varicella" />Ho avuto la varicella</label><br/>
-                    <label>
-                        <input type="checkbox" name="malattie" value="influenza" />Ho avuto l'influenza</label><br/>
-                    <label>Email
-                        <input type="email" name="email" required /></label><br/>
-                    <label>Telefono
-                        <input type="tel" name="telefono" required /></label><br/>
                     <label>Data di nascita
                         <input type="date" name="data" required /></label><br/>
                     <label>Password
                         <input type="password" name="password" required /></label><br/>
+                </fieldset>
+                <fieldset>
+                    <legend>Recapiti:</legend>
+                    <label>Email
+                        <input type="email" name="email" required /></label><br/>
+                    <label>Telefono
+                        <input type="tel" name="telefono" required /></label><br/>
+                </fieldset>
+                <fieldset>
+                    <legend>Info iscrizione:</legend>
+                    <label>Intolleranze<br/>
+                        <!-- Col tag radio è possibili specificare più opzioni, nel caso in cui si metta però lo stesso name in input -->
+                        <input type="checkbox" name="intolleranze" value="crostacei" />Crostacei</label><br/>
+                    <label>
+                        <input type="checkbox" name="intolleranze" value="lattosio" />Lattosio</label><br/>
+                    <label>
+                        <input type="checkbox" name="intolleranze" value="glutine" />Glutine</label><br/>
                     <label>Felicità (0-10) 
                         <input type="number" name="felicità" min="0" max="10"></label><br/>
                     <label for="a">Urgenza (0-10) 
                         <input type="range" id="a" name="urgenza" min="0" max="10" /></label><br/>
                     Il valore dello slider è: <output name="x" for="a"></output><br/>
-                    <label>Documento d'identità
-                        <input type="file" name="identità"></label><br/>
-                    <label>Aggiunte
-                        <!-- Il tag textarea permette di creare un'area di testo con dimensioni specificato (poi modificabili dall'utente) -->
-                        <br/><textarea rows="4" cols="50" placeholder="Questa sezione verrà letta direttamente dalla segreteria, perciò usare un linguaggio corretto."></textarea></label><br/>
                     <label>Scegli un branco
                         <br/><select name="branco" size="1">
                             <optgroup label="Cappuccinini">
@@ -91,6 +90,17 @@
                                 <option value="FR">Fiore Rosso</option>
                             </optgroup>
                         </select></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Altro:</legend>
+                    <label>Aggiunte
+                        <!-- Il tag textarea permette di creare un'area di testo con dimensioni specificato (poi modificabili dall'utente) -->
+                        <br/><textarea rows="4" cols="50" placeholder="Questa sezione verrà letta direttamente dalla segreteria, perciò usare un linguaggio corretto."></textarea></label><br/>
+                </fieldset>
+                <fieldset>
+                    <legend>Documento:</legend>
+                    <label>Carta d'identità:
+                        <input type="file" name="identità"></label><br/>
                 </fieldset>
                 <!-- L'attributo type con valore submit presenta un bottone che permette l'invio delle credenziali inserite -->
                 <input type="submit" value="Invia">

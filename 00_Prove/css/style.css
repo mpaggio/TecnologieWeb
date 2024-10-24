@@ -1,27 +1,104 @@
+/* Selettore di tipo (E) */
 img{
-    width: 400px;
+    width: 100px;
 }
 
 video{
     width: 100%;
+    
+}
+
+h1{
+    color: #2D4A64;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #82a0aa ;
+}
+
+nav{
+    margin: 0 5%;
+}
+
+nav > ul{
+    list-style: none;
+}
+
+nav > ul > li{
+    width: 18%;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #2D4A64;
+    padding: 4px 0;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+nav > ul > li > a{
+    color: white;
+    /* Nel seguente modo è come se il link prendesse le dimensioni dell'intero bottone */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover{
+    color: #a3cfcd;   
+}
+
+form{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius:  5px;
+    background-color: #82a0aa;
+    padding: 10px;
 }
 
 fieldset{
     color: black;
+    border-color: black;
     border-radius: 5px;
     background-color: #ccc;
+    margin: 10px 0;
 }
 
+/* Selettore di prossimità */
 fieldset > legend{
     color: white;
     text-align: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: black;
+    background-color: #2D4A64;
+    padding: 2px 5px
 }
 
-input{
+form > input{
     border: 1px solid #ccc;
     padding: 2px;
     border-radius: 4px;
+}
+
+/* Raggruppamento di selettori di attributi */
+form > input[type="submit"], form > input[type="reset"]{
+    color: white;
+    border: 1px solid black;
+    background-color: #2D4A64;
+
+}
+
+form > input[type="submit"]:hover, form > input[type="reset"]:hover{
+    color: #a3cfcd;
+}
+
+form > input[type="submit"]{
+    margin: 10px 0 0 35%;
+}
+
+form > input[type="reset"]{
+    margin: 0 35% 0 0;
 }
