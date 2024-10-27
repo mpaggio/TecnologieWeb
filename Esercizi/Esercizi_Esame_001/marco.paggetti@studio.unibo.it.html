@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Contatti | Esercizio HTML</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <h1>Contatti</h1>
+    </header>
+    <main>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Informazioni Anagrafiche</legend>
+                    <label for="Nome">Nome:</label>
+                        <input type="text" id="Nome" name="Nome" placeholder="nome..." required /><br/>
+                    <label for="Cognome">Cognome:</label>
+                        <input type="text" id="Cognome" name="Cognome" placeholder="cognome..." required /><br/>
+                    <label for="CodiceFiscale">Codice fiscale:</label>
+                        <input type="text" id="CodiceFiscale" name="CodiceFiscale" placeholder="codice..." required /><br/>
+                    <label for="DataNascita">Data di nascita:</label>
+                        <input type="date" id="DataNascita" name="DataNascita" required /><br/>
+                    <label for="LuogoNascita">Luogo di nascita:</label>
+                        <input type="text" id="LuogoNascita" name="LuogoNascita" placeholder="luogo..." required /><br/>
+                    <label for="Indirizzo">Indirizzo:</label>
+                        <input type="text" id="Indirizzo" name="Indirizzo" placeholder="indirizzo..." required /><br/>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Preferenze</legend>
+                    <label>Assicurazione:</label><br/>
+                    <input type="radio" id="PrimoLivello" name="Assicurazione" value="Primo livello" />
+                    <label for="PrimoLivello">Primo livello</label><br/>
+                    <input type="radio" id="SecondoLivello" name="Assicurazione" value="Secondo livello" />
+                    <label for="SecondoLivello">Secondo livello</label><br/>
+                    <input type="radio" id="TerzoLivello" name="Assicurazione" value="Terzo livello" />
+                    <label for="TerzoLivello">Terzo livello</label><br/>
+                    <label for="Mezzo">Mezzo preferito:</label>
+                    <select id="Mezzo" name="Mezzo" size="1">
+                        <option id="Automobile" value="Automobile">Automobile</option>
+                        <option id="Moto" value="Moto">Moto</option>
+                        <option id="Bicicletta" value="Bicicletta">Bicicletta</option>
+                        <option id="Monopattino" value="Monopattino">Monopattino</option>
+                    </select><br/>
+                    <input type="checkbox" id="Automunito" name="Automunito" value="Automunito" required/>
+                    <label for="Automunito">Automunito</label><br/>
+                    <label for="Descrizione">Descrizione:</label><br/>
+                    <textarea rows="4" cols="30" id="Descrizione" name="Descrizione" placeholder="descrizione..."></textarea>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <label for="Submit" hidden>Invia</label>
+            <input type="submit" id="Submit" value="Invia"/>
+            <label for="Reset" hidden>Cancella</label>
+            <input type="reset" id="Reset" value="Cancella"/>
+        </section>
+    </main>
+</body>
+</html>

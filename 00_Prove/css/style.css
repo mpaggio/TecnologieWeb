@@ -1,25 +1,69 @@
-/* Selettore di tipo (E) */
-img{
-    width: 100px;
+/* Regola di reset */
+body, header, h1, ul {
+    margin: 0;
+    padding: 0;
 }
 
+/* Selettore di tipo (E) */
 video{
     width: 100%;
     
 }
 
-h1{
+body, head{
+    background-color: #E0EEEC;
+}
+
+
+
+/* HEADER */
+/* --------------------------------------------------------------------------------- */
+header{
+    background-color: #82a0aa ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+header > h1{
     color: #2D4A64;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin: 10px 0;
     padding: 10px;
-    background-color: #82a0aa ;
+   
 }
+/* --------------------------------------------------------------------------------- */
 
+
+/* MAIN */
+/* --------------------------------------------------------------------------------- */
+main > h2{
+    color: white;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    margin: 10px 10%;
+    padding: 5px 6px;
+    background-color: #2D4A64 ;
+}
+/* --------------------------------------------------------------------------------- */
+
+
+
+/* NAV */
+/* --------------------------------------------------------------------------------- */
 nav{
-    margin: 0 5%;
+    margin: 20px 5%;
 }
 
 nav > ul{
@@ -49,25 +93,38 @@ nav > ul > li > a{
 nav > ul > li > a:hover{
     color: #a3cfcd;   
 }
+/* --------------------------------------------------------------------------------- */
 
+
+
+/* FORM */
+/* --------------------------------------------------------------------------------- */
 form{
-    display: inline-block;
+    width: 80%;
+    position: relative;
     border: 1px solid black;
     border-radius:  5px;
     background-color: #82a0aa;
     padding: 10px;
+    margin: 0 0 20px 10%;
+    z-index: 1;
 }
 
-fieldset{
+form textarea{
+    width: 100%;
+}
+
+form > fieldset{
     color: black;
     border-color: black;
     border-radius: 5px;
     background-color: #ccc;
     margin: 10px 0;
+    box-sizing: border-box;
 }
 
 /* Selettore di prossimità */
-fieldset > legend{
+form > fieldset > legend{
     color: white;
     text-align: left;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -77,28 +134,85 @@ fieldset > legend{
     padding: 2px 5px
 }
 
-form > input{
-    border: 1px solid #ccc;
-    padding: 2px;
+form > fieldset > label{
+    display: inline-block;
+    width: 10%;
+}
+
+/* Cerca qualsiasi figlio ul di form */
+form ul{
+    list-style: none;
+}
+
+form > fieldset > ul > li{
+    padding-bottom: 5px ;
+}
+
+form > fieldset > ul > li > input{
     border-radius: 4px;
+    border: 1px solid gray;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: white;
 }
 
 /* Raggruppamento di selettori di attributi */
 form > input[type="submit"], form > input[type="reset"]{
     color: white;
+    text-align: right;
     border: 1px solid black;
     background-color: #2D4A64;
-
 }
 
 form > input[type="submit"]:hover, form > input[type="reset"]:hover{
-    color: #a3cfcd;
+    color: #BEDAFA;
+    cursor: pointer;
+}
+/* --------------------------------------------------------------------------------- */
+
+
+
+/* FOOTER */
+/* --------------------------------------------------------------------------------- */
+footer{
+    padding: 5px 0 15px 0;
+    text-align: center;
+    background-color: #82a0aa ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-form > input[type="submit"]{
-    margin: 10px 0 0 35%;
+footer > h2{
+    text-align: center;
+    font-size: 2.5em;
+    color: #2D4A64;
+    margin: 5px 0 15px;
 }
 
-form > input[type="reset"]{
-    margin: 0 35% 0 0;
+footer > section > table{
+    display: inline-block;
 }
+
+footer > section > table > thead > tr > th{
+    color: #2D4A64;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+footer > section > table > tbody > tr > td{
+    color: #2D4A64;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+footer > section > table > tbody > tr > td > a{
+    display: inline-block;
+    color: #2D4A64;
+    text-align: left;
+    text-decoration: none;
+    margin-left: 5%;
+}
+
+footer > section > table > tbody > tr > td > a:hover{
+    color: #BEDAFA;
+}
+/* --------------------------------------------------------------------------------- */

@@ -14,7 +14,7 @@ body {
     background-color: #e4e4e4;  /* Colore specificato con esadecimale */
 }
 
-body > header {
+body > header, body > footer {
     background-color: rgb(54,54,54);  /* Colore specificato con rgb */
     /*font-family: 'Courier New', Courier, monospace;  /* Proprietà ereditata */
     color: #fff;  /* Colore speficato in forma contratta in esadecimale */
@@ -23,7 +23,7 @@ body > header {
 }
 
 /* Alternative --> header > h1, header h1, body > header h1, h1 */
-body > header > h1 {
+body > header > h1, body > footer > p {
     font-family: 'Courier New', Courier, monospace;  /* Gli altri elementi specificati sono delle alternative allo stile particolare */ 
 }
 
@@ -60,7 +60,7 @@ nav > ul > li > a {
     padding: 5px 0;
 }
 
-nav > ul > li > a:hover {
+nav > ul > li > a:hover, article > footer > a:hover ,aside > section > ul > li > a:hover {
     color: rgb(219, 69, 83);
 }
 
@@ -68,7 +68,7 @@ main {
     margin: 20px 5% 0;
 }
 
-main > article {  /* Oppure si può fare article e basta */
+main > article, aside, main > section, main > form {  /* Oppure si può fare article e basta */
     background-color: #fff;
     border: 1px, solid, #cacaca;  /* Vuole il colore, la dimensione e lo stile (è la proprietà abbreviata di border-color, border-size e border-style */
     margin-bottom: 20px;
@@ -108,7 +108,7 @@ article > footer {
     padding: 20px 5% 5%;
 }
 
-article > footer > a {
+article > footer > a, form > ul > li > input[type="submit"] {
     color: #000;
     background-color: rgb(221, 221, 221);
     text-decoration: none;
@@ -117,6 +117,138 @@ article > footer > a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-article > footer > a:hover {
+aside{
+    margin: 0 5% 20px;
+    box-sizing: border-box;
+}
+
+aside > section{
+    padding: 20px 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+aside > section > h2{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+aside > section > ul{
+    list-style: none;
+}
+
+aside > section > ul > li{
+    margin-bottom: 10px;
+}
+
+aside > section > ul > li > a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #000;
+}
+
+aside > section > ul > li > img{
+    float: left; /* Influenzano gli elementi laterali, ma non gli elementi padri, si comportano come  */
+    width: 50px;
+    margin-right: 5px;
+}
+
+main > section, form{
+    padding: 20px 5%;
+}
+
+main > section > h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 0 20px;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table th{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+table td, table th{
+    border: 1px solid #000;
+    text-align: center;
+    padding: 5px 0;
+}
+
+form > h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form > ul{
+    list-style: none;
+    width: 80%;
+    margin: 0 10%;
+}
+
+form > ul > li{
+    margin-bottom: 20px;
+}
+
+form > ul > li > label{
+    display: inline-block;
+    width: 50%;
+}
+
+form > ul > li > input:not([type="submit"]){
+    width: 50%;
+    box-sizing: border-box;
+}
+
+form > ul > li:last-child{
+    text-align: right;
+}
+
+form > ul > li > input[type="submit"]:hover{
     color: rgb(219, 69, 83);
+    cursor: pointer;
+}
+
+
+
+/* Media query */
+@media screen and (min-width: 768px){
+    nav{
+        margin: 0 10%;
+    }
+
+    nav > ul > li{
+        width: 19%;
+    }
+
+    /* La seguente regola seleziona tutti gli elementi tranne l'ultimo */
+    nav > ul > li:not(:last-child){
+        margin-right: 8%
+    }
+
+    nav > ul > li:last-child(){
+        margin-right: 0%;
+    }
+
+    main, aside{
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    main{
+        width: 50%;
+        margin: 20px 5% 0 10%;
+    }
+
+    aside{
+        width: 25%;
+        margin: 20px 10% 20px 0;
+    }
+    
+    table{
+        width: 80%;
+        margin: 0 10%;
+    }
 }
