@@ -1,0 +1,30 @@
+body{
+    font-family: monospace;
+    font-size: 100%;
+}
+
+header{
+    width: 100%;
+    margin: 5px 0px;
+    padding: 20px 0px;
+    border-bottom: purple solid 2px;
+    background-image: linear-color();
+}
+
+aside{
+    float: left;
+    width: 20%;
+    padding: 10px 20px;
+
+}
+
+footer{
+    clear: both;
+    width: 100%;
+    padding: 0px;
+}
+
+nav ul{
+    line-height: 2em;
+    list-style-type: square;
+}
